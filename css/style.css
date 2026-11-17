@@ -1,0 +1,521 @@
+
+/* =========================================
+   1. ПЕРЕМЕННЫЕ И ТЕМЫ ОФОРМЛЕНИЯ
+   ========================================= */
+:root {
+  /* Светлая тема (по умолчанию) */
+  --bg-page: #F8F9FA;
+  --bg-surface: #FFFFFF;
+  --bg-hero: linear-gradient(135deg, #E6F4EF 0%, #FDF6E9 100%);
+  --text-main: #1F2937;
+  --text-muted: #6B7280;
+  --accent: #1B6B50;       /* Степной изумруд */
+  --accent-hover: #14533E;
+  --accent-text: #FFFFFF;
+  --border-color: #E5E7EB;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --badge-bg: #E6F4EF;
+  --badge-text: #1B6B50;
+  --danger: #DC2626;
+  --warning: #D97706;
+}
+
+/* Тёмная тема (отличие №1-6: фоны, текст, акценты, тени/рамки, градиент) */
+body.theme-dark {
+  --bg-page: #12151C;
+  --bg-surface: #1E232E;
+  --bg-hero: linear-gradient(135deg, #1A2634 0%, #16221F 100%);
+  --text-main: #E5E7EB;
+  --text-muted: #9CA3AF;
+  --accent: #34D399;       /* Орская яшма / ночной неон */
+  --accent-hover: #10B981;
+  --accent-text: #0F172A;
+  --border-color: #2E3646;
+  --shadow: 0 0 0 1px #2E3646, 0 8px 20px rgba(0, 0, 0, 0.4);
+  --badge-bg: rgba(52, 211, 153, 0.15);
+  --badge-text: #34D399;
+}
+
+/* =========================================
+   2. БАЗОВЫЙ СБРОС И ТИПОГРАФИКА (360px+)
+   ========================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.5;
+  font-size: 16px;
+  min-width: 360px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* =========================================
+   3. ШАПКА САЙТА (MOBILE: СТЕК В 1 КОЛОНКУ)
+   ========================================= */
+.header {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px 0;
+}
+
+.header__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 16px;
+}
+
+.nav__link {
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.nav__link--active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.header__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* =========================================
+   4. КНОПКИ, БЕЙДЖИ И ФОРМЫ
+   ========================================= */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn--primary {
+  background-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.btn--primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn--outline {
+  background-color: transparent;
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+.btn--outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn--danger {
+  background-color: var(--danger);
+  color: #FFFFFF;
+}
+
+.btn--sm {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-control:focus {
+  outline: 2px solid var(--accent);
+  border-color: transparent;
+}
+
+/* =========================================
+   5. HERO-БЛОК И СЕКЦИИ (MOBILE)
+   ========================================= */
+.hero {
+  background: var(--bg-hero);
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.hero__title {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.hero__subtitle {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.stat-box {
+  background-color: var(--bg-surface);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.stat-box__num {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.section {
+  padding: 32px 0;
+}
+
+.section__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.section__title {
+  font-size: 1.4rem;
+}
+
+/* =========================================
+   6. СЕТКА КАРТОЧЕК (MOBILE: 1 КОЛОНКА)
+   ========================================= */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--bg-surface);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.card__img-placeholder {
+  height: 180px;
+  background-color: var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: 12px;
+  text-align: center;
+}
+
+.card__body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.card__meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.card__footer {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =========================================
+   7. СПЕЦИАЛЬНЫЕ МАКЕТЫ СТРАНИЦ (MOBILE)
+   ========================================= */
+/* Авторизация / Регистрация */
+.auth-wrapper {
+  max-width: 440px;
+  margin: 32px auto;
+  background-color: var(--bg-surface);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* Каталог, ЛК и Детальная страница: 1 колонка на мобильном */
+.layout-sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.panel {
+  background-color: var(--bg-surface);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* Галерея достопримечательности */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.gallery-main {
+  height: 220px;
+  background-color: var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.gallery-thumb {
+  height: 70px;
+  background-color: var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Таблица админки с горизонтальным скроллом на мобильном */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table th {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* =========================================
+   8. ПОДВАЛ (MOBILE: 1 КОЛОНКА)
+   ========================================= */
+.footer {
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+  padding: 32px 0;
+  margin-top: 48px;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.footer__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* =========================================
+   9. АДАПТИВ ДЛЯ ДЕСКТОПА (1024px — 1920px)
+   Минимум 6 структурных изменений
+   ========================================= */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  /* Изменение 1: Горизонтальная шапка с распределением элементов по краям */
+  .header__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  /* Изменение 2: Hero-блок перестраивается из 1 колонки в 2 колонки */
+  .hero {
+    padding: 64px 0;
+  }
+
+  .hero__grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .hero__title {
+    font-size: 2.75rem;
+  }
+
+  /* Изменение 3: Сетка карточек переходит от 1 колонки к 3 колонкам */
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .section__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Изменение 4: Каталог, ЛК и Детальная страница получают левую/правую боковую колонку */
+  .layout-sidebar {
+    grid-template-columns: 300px 1fr;
+    align-items: start;
+    gap: 32px;
+  }
+
+  .layout-sidebar--right {
+    grid-template-columns: 1fr 340px;
+  }
+
+  /* Изменение 5: Галерея достопримечательности становится асимметричной (главное фото + столбец миниатюр) */
+  .gallery-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .gallery-main {
+    height: 360px;
+  }
+
+  .gallery-thumbs {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .gallery-thumb {
+    height: auto;
+  }
+
+  /* Изменение 6: Подвал перестраивается из 1 колонки в 3 колонки */
+  .footer__grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+  }
+}
