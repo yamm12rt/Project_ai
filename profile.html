@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет — Открой Оренбуржье</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Открой Оренбуржье</a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="catalog.html" class="nav__link">Каталог мест</a>
+        <a href="profile.html" class="nav__link nav__link--active">Личный кабинет</a>
+        <a href="admin.html" class="nav__link">Модерация</a>
+      </nav>
+      <div class="header__actions">
+        <a href="index.html" class="btn btn--outline btn--sm">Выйти</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="layout-sidebar">
+      <!-- Боковая панель профиля -->
+      <aside class="panel">
+        <span class="badge">Краевед / Автор</span>
+        <h2 style="margin: 10px 0 4px;">Алексей Смирнов</h2>
+        <p class="card__meta" style="margin-bottom: 16px;">smirnov.oren@mail.ru</p>
+        <ul class="footer__list" style="border-top: 1px solid var(--border-color); padding-top: 12px;">
+          <li>Опубликовано мест: <strong>4</strong></li>
+          <li>На проверке: <strong>1</strong></li>
+          <li>Загружено фото: <strong>18</strong></li>
+        </ul>
+      </aside>
+
+      <!-- Основная рабочая область -->
+      <div style="display: flex; flex-direction: column; gap: 28px;">
+        <!-- Форма добавления достопримечательности -->
+        <section class="panel">
+          <h1 style="font-size: 1.4rem; margin-bottom: 16px;">Добавить новую достопримечательность</h1>
+          <form action="landmark.html" method="get">
+            <div class="form-group">
+              <label class="form-label" for="place-title">Название достопримечательности *</label>
+              <input class="form-control" type="text" id="place-title" placeholder="Например: Губерлинские горы" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="place-category">Категория</label>
+              <select class="form-control" id="place-category">
+                <option>Природный памятник</option>
+                <option>Архитектура и история</option>
+                <option>Музей / Культурный центр</option>
+                <option>Водоём / Курорт</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="place-coords">Географические координаты (широта, долгота) *</label>
+              <input class="form-control" type="text" id="place-coords" placeholder="51.1833° N, 58.1167° E" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="place-desc">Подробное описание и как добраться *</label>
+              <textarea class="form-control" id="place-desc" rows="4" placeholder="Опишите историю места, особенности ландшафта и маршрут..." required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="place-photos">Фотографии объекта (можно выбрать несколько файлов) *</label>
+              <input class="form-control" type="file" id="place-photos" accept="image/*" multiple required>
+            </div>
+
+            <button type="submit" class="btn btn--primary">Отправить на модерацию</button>
+          </form>
+        </section>
+
+        <!-- Мои публикации -->
+        <section class="panel">
+          <h2 style="font-size: 1.25rem; margin-bottom: 16px;">Мои добавленные объекты</h2>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Название</th>
+                  <th>Координаты</th>
+                  <th>Статус</th>
+                  <th>Действие</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Национальный парк «Бузулукский бор»</td>
+                  <td>52.7850, 52.1420</td>
+                  <td><span class="badge">Опубликовано</span></td>
+                  <td><a href="landmark.html">Открыть</a></td>
+                </tr>
+                <tr>
+                  <td>Гора Верблюжка (Дюймовочка)</td>
+                  <td>51.3911, 56.8144</td>
+                  <td><span class="badge" style="color: var(--warning);">На модерации</span></td>
+                  <td><a href="landmark.html">Просмотр</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

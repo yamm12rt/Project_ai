@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация — Открой Оренбуржье</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Открой Оренбуржье</a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="catalog.html" class="nav__link">Каталог мест</a>
+      </nav>
+      <div class="header__actions">
+        <a href="login.html" class="btn btn--outline btn--sm">Войти</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="auth-wrapper">
+      <h1 style="margin-bottom: 8px;">Регистрация участника</h1>
+      <p class="card__meta" style="margin-bottom: 20px;">
+        Присоединяйтесь к сообществу исследователей Оренбургской области.
+      </p>
+
+      <form action="profile.html" method="get">
+        <div class="form-group">
+          <label class="form-label" for="fullname">Имя и фамилия (или организация)</label>
+          <input class="form-control" type="text" id="fullname" name="fullname" placeholder="Иван Петров" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="role">Ваша роль на платформе</label>
+          <select class="form-control" id="role" name="role">
+            <option value="resident">Местный житель / краевед</option>
+            <option value="tourist">Турист / путешественник (16+)</option>
+            <option value="photo">Фотограф / автор контента</option>
+            <option value="org">Представитель учреждения культуры / администрации</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="reg-email">Электронная почта</label>
+          <input class="form-control" type="email" id="reg-email" name="email" placeholder="name@example.ru" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="reg-password">Пароль</label>
+          <input class="form-control" type="password" id="reg-password" name="password" minlength="6" required>
+        </div>
+
+        <div class="form-group">
+          <label style="display: flex; gap: 8px; align-items: center; font-size: 0.9rem;">
+            <input type="checkbox" required>
+            <span>Подтверждаю, что мне исполнилось 16 лет, и соглашаюсь с правилами публикации</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn--primary" style="width: 100%;">Создать аккаунт</button>
+      </form>
+
+      <p class="card__meta" style="margin-top: 16px; text-align: center;">
+        Уже зарегистрированы? <a href="login.html">Войти</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
