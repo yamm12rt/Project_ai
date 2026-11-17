@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Открой Оренбуржье — Тёмная тема</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-dark">
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index-dark.html" class="logo">Открой Оренбуржье</a>
+      <nav class="nav" aria-label="Главное меню">
+        <a href="index-dark.html" class="nav__link nav__link--active">Главная</a>
+        <a href="catalog.html" class="nav__link">Каталог мест</a>
+        <a href="profile.html" class="nav__link">Добавить объект</a>
+        <a href="admin.html" class="nav__link">Модерация</a>
+      </nav>
+      <div class="header__actions">
+        <a href="index.html" class="btn btn--outline btn--sm" title="Переключить тему">Светлая тема</a>
+        <a href="login.html" class="btn btn--outline btn--sm">Войти</a>
+        <a href="register.html" class="btn btn--primary btn--sm">Регистрация</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <span class="badge">Туризм и краеведение Оренбургской области</span>
+          <h1 class="hero__title">Откройте уникальные места степного края</h1>
+          <p class="hero__subtitle">
+            Народная карта достопримечательностей от местных жителей, краеведов, фотографов и культурных учреждений региона. Делитесь координатами и историями любимых мест.
+          </p>
+          <div class="header__actions" style="justify-content: flex-start;">
+            <a href="catalog.html" class="btn btn--primary">Смотреть каталог</a>
+            <a href="login.html" class="btn btn--outline">Добавить достопримечательность</a>
+          </div>
+        </div>
+        <div class="hero__stats">
+          <div class="stat-box">
+            <span class="stat-box__num">148+</span>
+            <span>Проверенных локаций</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-box__num">35</span>
+            <span>Районов области</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-box__num">620+</span>
+            <span>Авторских фото</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-box__num">16+</span>
+            <span>Маршрутов выходного дня</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Популярные достопримечательности</h2>
+          <a href="catalog.html">Все объекты каталога &rarr;</a>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card__img-placeholder">Фото: Бузулукский бор (Царица-сосна)</div>
+            <div class="card__body">
+              <span class="badge">Природа</span>
+              <h3 class="card__title">Национальный парк «Бузулукский бор»</h3>
+              <p class="card__meta">Бузулукский район • 52.7850° N, 52.1420° E</p>
+              <p>Уникальный реликтовый сосновый массив посреди заволжских степей с вековыми деревьями и экотропами.</p>
+              <div class="card__footer">
+                <span class="card__meta">Автор: А. Смирнов</span>
+                <a href="landmark.html" class="btn btn--outline btn--sm">Подробнее</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-placeholder">Фото: Солёные озёра Соль-Илецка</div>
+            <div class="card__body">
+              <span class="badge">Курорты и озёра</span>
+              <h3 class="card__title">Озеро Развал (Соль-Илецк)</h3>
+              <p class="card__meta">Соль-Илецкий округ • 51.1489° N, 54.9961° E</p>
+              <p>Знаменитое солёное озеро с высокой плотностью воды, образовавшееся на месте старых соляных разработок.</p>
+              <div class="card__footer">
+                <span class="card__meta">Автор: М. Кузнецова</span>
+                <a href="landmark.html" class="btn btn--outline btn--sm">Подробнее</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__img-placeholder">Фото: Пешеходный мост Европа — Азия</div>
+            <div class="card__body">
+              <span class="badge">Архитектура</span>
+              <h3 class="card__title">Мост «Европа — Азия» через реку Урал</h3>
+              <p class="card__meta">г. Оренбург • 51.7536° N, 55.1064° E</p>
+              <p>Символическая граница двух частей света на набережной Оренбурга с панорамным видом на Зауральную рощу.</p>
+              <div class="card__footer">
+                <span class="card__meta">Автор: Краеведческий музей</span>
+                <a href="landmark.html" class="btn btn--outline btn--sm">Подробнее</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <span class="logo">Открой Оренбуржье</span>
+        <p class="card__meta" style="margin-top: 8px;">
+          Региональная платформа для туристов, краеведов и учреждений культуры Оренбургской области.
+        </p>
+      </div>
+      <div>
+        <strong>Разделы</strong>
+        <ul class="footer__list">
+          <li><a href="catalog.html">Каталог мест</a></li>
+          <li><a href="profile.html">Личный кабинет</a></li>
+          <li><a href="index.html">Светлая версия главной</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Участие</strong>
+        <ul class="footer__list">
+          <li><a href="register.html">Стать автором</a></li>
+          <li><a href="admin.html">Панель модератора</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
