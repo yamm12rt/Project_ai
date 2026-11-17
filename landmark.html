@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Национальный парк «Бузулукский бор» — Открой Оренбуржье</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Открой Оренбуржье</a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="catalog.html" class="nav__link nav__link--active">Каталог мест</a>
+        <a href="profile.html" class="nav__link">Добавить объект</a>
+      </nav>
+      <div class="header__actions">
+        <a href="catalog.html" class="btn btn--outline btn--sm">&larr; Назад в каталог</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div style="margin-bottom: 20px;">
+      <span class="badge">Природа и заповедники</span>
+      <h1 style="font-size: 2rem; margin: 8px 0;">Национальный парк «Бузулукский бор»</h1>
+      <p class="card__meta">Оренбургская область, Бузулукский район • Добавлено: 12 октября 2026</p>
+    </div>
+
+    <!-- Галерея изображений (адаптивно меняется с сетки 1+3 на асимметричный блок) -->
+    <section class="gallery-grid" aria-label="Фотографии достопримечательности">
+      <div class="gallery-main">Главное фото: Панорама вековых сосен Бузулукского бора</div>
+      <div class="gallery-thumbs">
+        <div class="gallery-thumb">Фото 2: Экотропа</div>
+        <div class="gallery-thumb">Фото 3: Река Боровка</div>
+        <div class="gallery-thumb">Фото 4: Царица-сосна</div>
+      </div>
+    </section>
+
+    <!-- Описание + Боковая карточка координат -->
+    <div class="layout-sidebar layout-sidebar--right">
+      <article class="panel">
+        <h2 style="margin-bottom: 12px;">Описание достопримечательности</h2>
+        <p style="margin-bottom: 14px;">
+          Бузулукский бор — уникальный островной массив реликтового соснового леса, расположенный на границе Оренбургской и Самарской областей в окружении степей Заволжья. Площадь национального парка составляет более 106 тысяч гектаров.
+        </p>
+        <p style="margin-bottom: 14px;">
+          Главной природной жемчужиной парка считается 350-летняя «Царица-сосна» высотой более 30 метров. Для туристов оборудованы деревянные настилы, смотровые площадки и информационные стенды о флоре и фауне региона.
+        </p>
+        <h3 style="margin: 18px 0 8px;">Рекомендации для путешественников</h3>
+        <ul style="padding-left: 20px;">
+          <li>Лучшее время для посещения — с мая по октябрь.</li>
+          <li>Перед въездом на территорию необходимо оформить разрешение на сайте нацпарка.</li>
+          <li>Ближайший крупный населённый пункт — город Бузулук (15 км).</li>
+        </ul>
+      </article>
+
+      <aside class="panel">
+        <h3 style="margin-bottom: 12px;">Географические данные</h3>
+        <p class="card__meta">Широта и долгота:</p>
+        <p style="font-size: 1.1rem; font-weight: 700; margin-bottom: 16px;">52.7850° N, 52.1420° E</p>
+
+        <div style="height: 160px; background-color: var(--border-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--text-muted); text-align: center; padding: 12px;">
+          Схема расположения точки на карте Оренбургской области
+        </div>
+
+        <div style="border-top: 1px solid var(--border-color); padding-top: 12px;">
+          <p class="card__meta">Автор публикации:</p>
+          <p><strong>Алексей Смирнов</strong> (Краевед)</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Административная панель — Открой Оренбуржье</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Открой Оренбуржье <span class="badge">Admin</span></a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">На сайт</a>
+        <a href="catalog.html" class="nav__link">Каталог</a>
+        <a href="admin.html" class="nav__link nav__link--active">Заявки на модерацию</a>
+      </nav>
+      <div class="header__actions">
+        <a href="login.html" class="btn btn--outline btn--sm">Выйти</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="section__header">
+      <h1>Модерация достопримечательностей</h1>
+      <span class="badge">Ожидают проверки: 3 объекта</span>
+    </div>
+
+    <div class="panel">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Объект и координаты</th>
+              <th>Автор</th>
+              <th>Фото</th>
+              <th>Действия модератора</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#104</td>
+              <td>
+                <strong>Гора Верблюжка (Дюймовочка)</strong><br>
+                <span class="card__meta">51.3911° N, 56.8144° E</span>
+              </td>
+              <td>Алексей Смирнов</td>
+              <td>5 шт.</td>
+              <td>
+                <div style="display: flex; gap: 8px;">
+                  <a href="landmark.html" class="btn btn--primary btn--sm">Одобрить</a>
+                  <button type="button" class="btn btn--danger btn--sm">Отклонить</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>#105</td>
+              <td>
+                <strong>Тузлуккольские грязи</strong><br>
+                <span class="card__meta">51.2305° N, 55.2841° E</span>
+              </td>
+              <td>Мария Кузнецова</td>
+              <td>3 шт.</td>
+              <td>
+                <div style="display: flex; gap: 8px;">
+                  <a href="landmark.html" class="btn btn--primary btn--sm">Одобрить</a>
+                  <button type="button" class="btn btn--danger btn--sm">Отклонить</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>#106</td>
+              <td>
+                <strong>Музей Виктора Черномырдина</strong><br>
+                <span class="card__meta">51.8152° N, 56.3688° E</span>
+              </td>
+              <td>Историко-мемориальный музей</td>
+              <td>8 шт.</td>
+              <td>
+                <div style="display: flex; gap: 8px;">
+                  <a href="landmark.html" class="btn btn--primary btn--sm">Одобрить</a>
+                  <button type="button" class="btn btn--danger btn--sm">Отклонить</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог достопримечательностей — Открой Оренбуржье</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Открой Оренбуржье</a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="catalog.html" class="nav__link nav__link--active">Каталог мест</a>
+        <a href="profile.html" class="nav__link">Добавить объект</a>
+        <a href="admin.html" class="nav__link">Модерация</a>
+      </nav>
+      <div class="header__actions">
+        <a href="login.html" class="btn btn--outline btn--sm">Войти</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1 style="margin-bottom: 20px;">Каталог достопримечательностей Оренбуржья</h1>
+
+    <div class="layout-sidebar">
+      <!-- Фильтры (на мобильном сверху, на десктопе слева) -->
+      <aside class="panel">
+        <h2 style="font-size: 1.15rem; margin-bottom: 14px;">Фильтр объектов</h2>
+        <form action="catalog.html" method="get">
+          <div class="form-group">
+            <label class="form-label" for="search">Поиск по названию</label>
+            <input class="form-control" type="search" id="search" placeholder="Например: Ириклинское...">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="district">Район / Городской округ</label>
+            <select class="form-control" id="district">
+              <option>Все районы области</option>
+              <option>г. Оренбург</option>
+              <option>Бузулукский район</option>
+              <option>Соль-Илецкий округ</option>
+              <option>Гайский округ</option>
+              <option>Кувандыкский округ</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <span class="form-label">Категория</span>
+            <label style="display: block; margin-bottom: 6px;"><input type="checkbox" checked> Природа и заповедники</label>
+            <label style="display: block; margin-bottom: 6px;"><input type="checkbox" checked> Архитектура и история</label>
+            <label style="display: block;"><input type="checkbox" checked> Озёра и водохранилища</label>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="width: 100%;">Применить</button>
+        </form>
+      </aside>
+
+      <!-- Список карточек -->
+      <section class="cards-grid">
+        <article class="card">
+          <div class="card__img-placeholder">Фото: Ириклинское водохранилище</div>
+          <div class="card__body">
+            <span class="badge">Водоёмы</span>
+            <h3 class="card__title">Ириклинское водохранилище</h3>
+            <p class="card__meta">Гайский округ • 51.8322° N, 58.6511° E</p>
+            <p>Крупнейший искусственный водоём Южного Урала, который местные жители называют «Оренбургским морем».</p>
+            <div class="card__footer">
+              <span class="card__meta">4 фото</span>
+              <a href="landmark.html" class="btn btn--primary btn--sm">Открыть</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__img-placeholder">Фото: Долина слёз / Кувандык</div>
+          <div class="card__body">
+            <span class="badge">Природа</span>
+            <h3 class="card__title">Хребет Карамурунтау (Нос-гора)</h3>
+            <p class="card__meta">Саракташский район • 51.5540° N, 56.5120° E</p>
+            <p>Живописный горный хребет в долине реки Сакмары с панорамными смотровыми площадками.</p>
+            <div class="card__footer">
+              <span class="card__meta">6 фото</span>
+              <a href="landmark.html" class="btn btn--primary btn--sm">Открыть</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__img-placeholder">Фото: Караван-Сарай в Оренбурге</div>
+          <div class="card__body">
+            <span class="badge">Архитектура</span>
+            <h3 class="card__title">Историко-архитектурный комплекс «Караван-Сарай»</h3>
+            <p class="card__meta">г. Оренбург • 51.7681° N, 55.0875° E</p>
+            <p>Выдающийся памятник архитектуры XIX века, построенный по проекту архитектора Александра Брюллова.</p>
+            <div class="card__footer">
+              <span class="card__meta">5 фото</span>
+              <a href="landmark.html" class="btn btn--primary btn--sm">Открыть</a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
